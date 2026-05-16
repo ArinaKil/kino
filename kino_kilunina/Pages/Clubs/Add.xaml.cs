@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace kino_kilunina
+namespace kino_kilunina.Pages.Clubs
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Add.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Add : Page
     {
-        public static MainWindow init;
-        public MainWindow()
+        public Add(Main main)
         {
             InitializeComponent();
-            init = this;
-        }
-        public void OpenPage(Page page)
-        {
-            frame.Navigate(page);
         }
     }
 }
