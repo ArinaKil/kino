@@ -26,5 +26,9 @@ namespace kino_kilunina
         {
             frame.Navigate(page);
         }
+        private void Clubs(object sender, RoutedEventArgs e) =>
+            OpenPage(new Pages.Clubs.Main());
+        private void Users(object sender, RoutedEventArgs e) =>
+            OpenPage(new Pages.Users.Main());
     }
 }
