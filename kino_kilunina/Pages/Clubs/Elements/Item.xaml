@@ -13,7 +13,7 @@
 
         <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Source="/Images/ic-club.png"/>
         <Button Click="EditClub" Height="25" Content="Изменить" VerticalAlignment="Top" Margin="10,95,10,0" Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="white"/>
-        <Button Click="DeleteClub" Height="25" Content="Удалить" VerticalAlignment="Top" Margin="10,125,10,0" Background="#FFCD1E1E" BorderBrush="#FFCD1E1E" Foreground="white"/>
+        <Button Click="DeleteClub" Height="25" Content="Удалить" VerticalAlignment="Top" Margin="10,125,10,10" Background="#FFCD1E1E" BorderBrush="#FFCD1E1E" Foreground="white"/>
 
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
