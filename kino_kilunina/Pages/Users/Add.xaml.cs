@@ -47,7 +47,7 @@ namespace kino_kilunina.Pages.Users
         {
             DateTime DTRentStart = new DateTime();
             DateTime.TryParse(RentStart.Text, out DTRentStart);
-            DTRentStart = DTRentStart.Add(TimeSpan.Parse(this.RentStart.Text));
+            DTRentStart = DTRentStart.Add(TimeSpan.Parse(this.RentTime.Text));
 
             if (User == null)
             {

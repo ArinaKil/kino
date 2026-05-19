@@ -14,8 +14,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Source="/Images/ic-user.png"/>
-        <Button Click="EditClub" Height="25" Content="Добавить" VerticalAlignment="Top" Margin="10,95,10,0" Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="white"/>
+        <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Source="/Images/ic-user.png" Cursor=""/>
+        <Button Click="AddUser" Height="25" Content="Добавить" VerticalAlignment="Top" Margin="10,95,10,0" Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="white"/>
 
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
