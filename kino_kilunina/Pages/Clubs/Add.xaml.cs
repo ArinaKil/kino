@@ -20,9 +20,43 @@ namespace kino_kilunina.Pages.Clubs
     /// </summary>
     public partial class Add : Page
     {
-        public Add(Main main)
+        Main Main;
+        Models.Clubs Club;
+        public Add(Main main, Models.Clubs club = null)
         {
             InitializeComponent();
+
+            this.Main = main;
+            if (club != null)
+            {
+                Club = club;
+                Name.Text = Club.Name;
+                Address.Text = Club.Address;
+                WorkTime.Text = Club.WorkTime;
+                BtnAdd.Content = "Изменить";
+            }
+        }
+
+         private void AddClub(object sender, RoutedEventArgs e)
+        {
+            if (Club == null)
+            {
+                Models.Clubs newClib = new Models.Clubs()
+                {
+                    Name = Name.Text,
+                    Address = Address.Text,
+                    WorkTime = WorkTime.Text,
+                };
+                Main.AllClubs.Add(newClib);
+            }
+            else
+            {
+                Club.Name = Name.Text;
+                Club.Address = Address.Text;
+                Club.WorkTime = WorkTime.Text;
+            }
+            Main.AllClubs.SaveChanges();
+            MainWindow.init.OpenPage(new Main());
         }
     }
 }

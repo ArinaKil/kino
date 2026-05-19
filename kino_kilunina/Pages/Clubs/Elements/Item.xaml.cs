@@ -21,10 +21,28 @@ namespace kino_kilunina.Pages.Clubs.Elements
     /// </summary>
     public partial class Item : UserControl
     {
-        
+        Models.Clubs Club;
+        Main Main;
+
         public Item(Models.Clubs club, Main main)
         {
             InitializeComponent();
+            Club = club;
+            Main = main;
+
+            Name.Text = Club.Name;
+            Address.Text = Club.Address;
+            WorkTime.Text = Club.WorkTime;
+        }
+
+        private void EditClub(object sender, RoutedEventArgs e) =>
+            MainWindow.init.OpenPage(new Add(Main, Club));
+        
+        private void DeleteClub(object sender, RoutedEventArgs e)
+        {
+            Main.AllClubs.Remove(Club);
+            Main.AllClubs.SaveChanges();
+            Main.Parent.Children.Remove(this);
         }
     }
 }
